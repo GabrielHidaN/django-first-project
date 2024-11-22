@@ -1,16 +1,25 @@
 #from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 
 def index_blog(request):
-    print('Blog')
-    return HttpResponse('Blog do App 1')
+
+    return render(
+        request , 
+        'blog/index.html'
+    )
 
 def whoami(request):
-    print('whoami')
-    return HttpResponse('Whoami')
+
+    return render(
+        request,
+        'blog/whoami.html'
+    )
 
 def portifolio(request):
-    print('Portifolio')
-    return HttpResponse('Portifolio')
+
+    return render(
+        request , 
+        'blog/portifolio.html'
+    )
